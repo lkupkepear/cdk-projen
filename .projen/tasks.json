@@ -200,6 +200,24 @@
           "exec": "cdk diff"
         }
       ]
+    },
+    "diagram:html": {
+      "name": "diagram:html",
+      "description": "Creates a HTML diagram of your CDK stack",
+      "steps": [
+        {
+          "exec": "cfn-dia html"
+        }
+      ]
+    },
+    "diagram:draw": {
+      "name": "diagram:draw",
+      "description": "Creates a Draw.io diagram of your CDK stack",
+      "steps": [
+        {
+          "exec": "cfn-dia draw.io"
+        }
+      ]
     }
   },
   "env": {
