@@ -1,0 +1,24 @@
+type Query {
+  product(id: ID!): Product
+  product(title: String!): Product
+}
+
+type Mutation {
+  createProduct(input: CreateProductInput!): CreateProductPayload!
+}
+
+input CreateProductInput {
+  title: String!
+  totalPrice: Int!
+}
+
+type CreateProductPayload {
+  product: Product
+  successful: Boolean!
+}
+
+type Product {
+  id: ID!
+  title: String
+  totalPrice: Int
+}
