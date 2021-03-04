@@ -5,7 +5,15 @@ const project = new AwsCdkTypeScriptApp({
   defaultReleaseBranch: 'main',
   jsiiFqn: "projen.AwsCdkTypeScriptApp",
   name: 'cdk-projen',
-
+  authorName: 'Linc Kupke',
+  deps: [
+    '@mhlabs/cfn-diagram'
+  ],
+  cdkDependencies: [
+    '@aws-cdk/core',
+    '@aws-cdk/aws-lambda',
+    '@aws-cdk/aws-appsync',
+  ],
   /* AwsCdkTypeScriptAppOptions */
   // appEntrypoint: 'main.ts',                                                 /* The CDK app's entrypoint (relative to the source directory, which is "src" by default). */
   // cdkDependencies: undefined,                                               /* Which AWS CDK modules (those that start with "@aws-cdk/") this app uses. */
@@ -109,5 +117,14 @@ const project = new AwsCdkTypeScriptApp({
   // tsconfig: undefined,                                                      /* Custom TSConfig. */
   // typescriptVersion: 'latest',                                              /* TypeScript version to use. */
 });
+project.addTask("diagram:html", {
+  exec: 'cfn-dia h',
+  description: 'Creates a HTML diagram of your CDK stack'
+})
+project.addTask("diagram:draw", {
+  exec: 'cfn-dia h',
+  description: 'Creates a Draw.io diagram of your CDK stack'
+})
+
 
 project.synth();
