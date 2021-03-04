@@ -7,7 +7,7 @@ const project = new AwsCdkTypeScriptApp({
   name: 'cdk-projen',
   authorName: 'Linc Kupke',
   deps: [
-    '@mhlabs/cfn-diagram'
+    '@mhlabs/cfn-diagram',
   ],
   cdkDependencies: [
     '@aws-cdk/core',
@@ -117,14 +117,14 @@ const project = new AwsCdkTypeScriptApp({
   // tsconfig: undefined,                                                      /* Custom TSConfig. */
   // typescriptVersion: 'latest',                                              /* TypeScript version to use. */
 });
-project.addTask("diagram:html", {
+project.addTask('diagram:html', {
   exec: 'cfn-dia html',
-  description: 'Creates a HTML diagram of your CDK stack'
-})
-project.addTask("diagram:draw", {
+  description: 'Creates a HTML diagram of your CDK stack',
+});
+project.addTask('diagram:draw', {
   exec: 'cfn-dia draw.io',
-  description: 'Creates a Draw.io diagram of your CDK stack'
-})
+  description: 'Creates a Draw.io diagram of your CDK stack',
+});
 
 
 project.synth();
