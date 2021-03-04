@@ -962,7 +962,7 @@
     open "^7.1.0"
     sha1 "^1.1.1"
 
-"@mhlabs/cfn-diagram@*":
+"@mhlabs/cfn-diagram@^1.1.19":
   version "1.1.19"
   resolved "https://registry.yarnpkg.com/@mhlabs/cfn-diagram/-/cfn-diagram-1.1.19.tgz#0324878cd3cfb0b3c268ca3687d0c90807ddb5f1"
   integrity sha512-sF6A60pP0EluhazxG2F9kdJP2XHcEC/qToMqnFj4mwjVGODzLd4CqbVIR3dcJDwmc1FcBNQBEPyBA5RGGy22KQ==
