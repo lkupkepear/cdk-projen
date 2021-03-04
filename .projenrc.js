@@ -118,11 +118,11 @@ const project = new AwsCdkTypeScriptApp({
   // typescriptVersion: 'latest',                                              /* TypeScript version to use. */
 });
 project.addTask("diagram:html", {
-  exec: 'cfn-dia h',
+  exec: 'cfn-dia html',
   description: 'Creates a HTML diagram of your CDK stack'
 })
 project.addTask("diagram:draw", {
-  exec: 'cfn-dia h',
+  exec: 'cfn-dia draw.io',
   description: 'Creates a Draw.io diagram of your CDK stack'
 })
 
